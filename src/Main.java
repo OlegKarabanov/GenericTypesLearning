@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Main {
@@ -28,6 +29,20 @@ public class Main {
                }
            }
 
+        ArrayList <Integer> numbers = new ArrayList();       // сохраняет Object
+
+            for(int i=0; i<10; i++){              // сохраняем в коллекцию 10,20,,,100
+                numbers.add(i*10);                // заполняем значениями
+            //numbers.add(i*10.4F);      // Так будет ошибка
+            }
+            int sum = 0;                            // суммируем все сложенные цифры
+            for(Integer o : numbers){                //берем наш объект
+                sum = sum + /*(Integer)*/o;             // суммируем
+            }
+        System.out.println(sum);
+
+
+            // Основной тип <Тип параметр>
 
 
     }
