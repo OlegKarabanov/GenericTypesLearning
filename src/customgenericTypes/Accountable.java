@@ -1,8 +1,8 @@
 package customgenericTypes;
 
-public class Accountable <T>{
+public interface Accountable <T> {
     T getId();
-    void  setId();
+    void  setId(T id);
     void setSum(int sum);
 
     int getSum() ;
