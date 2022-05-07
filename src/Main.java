@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Scanner;
 
 public class Main {
@@ -42,8 +43,44 @@ public class Main {
         System.out.println(sum);
 
 
-            // Основной тип <Тип параметр>
+            // ОсновнойТип <ТипПараметр>
+            //ОсновнойТип <ТипПараметр1,ТипПараметр2,ТипПараметр3>, // бесконечное значение
+
+            HashMap<Integer, String> map = new HashMap<Integer, String>();
+            map.put(7,"Привет");
+            map.put(15, "Hello");
+
+            ArrayList<String> listHello = new ArrayList<>();
+            listHello.add("Привет");
+            listHello.add("Hi");
+
+            ArrayList<String> listBye = new ArrayList<>();
+            listBye.add("Пока");
+            listBye.add("Good Bye");
+
+
+            ArrayList<ArrayList<String>> list = new ArrayList();
+            list.add(listHello);
+            list.add(listBye);
+
+            for (ArrayList<String> spisok : list){
+                for(String s : spisok){
+                    System.out.println(s);
+                }
+        }
+
+
+
 
 
     }
 }
+
+/*
+* то что делаем мы в коде                                 то во что преобрпзует компилятор
+* ArrayList<Integer> List = new ArrayList<Integer>();     ArrayList List - new ArrayList
+* list.add(1);                                            list.add((Integer) 1);
+* int x = list.get(0);                                    list x = (Integer) list.get(0);
+* list.set(0.10);                                         list.set(0. (Integer) 10);
+*
+* */
